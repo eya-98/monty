@@ -8,6 +8,7 @@
 int main(int argc, char **argv)
 {
 stack_t **head, *g_head;
+
 if (argc != 2)
 {
 printf("USAGE: monty file\n");
@@ -18,3 +19,4 @@ g_head = &head;
 _read(argv[1], g_head);
 exit(0);
 }
+
