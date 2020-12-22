@@ -10,7 +10,7 @@ stack_t swap(stack_t **g_head, int num)
 stack_t *tmp;
 if (*g_head == NULL || (*g_head)->next == NULL)
 {
-fprint(stderr, "L%i: can't swap, stack too short", num);
+fprintf(stderr, "L%i: can't swap, stack too short", num);
 exit(EXIT_FAILURE);
 }
 tmp = (*g_head)->next;
