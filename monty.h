@@ -1,13 +1,15 @@
 #ifndef MONTY
 #define MONTY
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 void nop(__attribute__((unused))stack_t **g_head,__attribute__((unused)) int num);
 int parse(stack_t g_head, char *commmand, int num, char *string);
-void pint(stack **g_head,int num)
-void pop(stack_t **g_head, int num)
-stack_t push(stack_t **g_head, int num)
-stack_t swap(stack_t **g_head, int num)
-void _read(char **argv, stack_t g_head)
-
+void pint(stack **g_head,int num);
+void pop(stack_t **g_head, int num);
+stack_t push(stack_t **g_head, int num);
+stack_t swap(stack_t **g_head, int num);
+void _read(char **argv, stack_t g_head);
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
