@@ -1,8 +1,9 @@
 #include "monty.h"
 /**
- * 
- * 
- * 
+ * swap - swap the top and the second elements of a dlinked lists
+ * @g_head: pointer to the first node
+ * @num: line counter
+ * Return: adress of new node
  */
 stack_t swap(stack_t **g_head, int num)
 {
@@ -18,4 +19,5 @@ tmp->prev = NULL;
 (*g_head)->next = tmp->next;
 tmp->next = *g_head;
 *g_head = tmp;
+return (**g_head);
 }

@@ -27,7 +27,7 @@ while (getline(&line, &len, op) != -1)
 command = strtok(line, " ");
 num++;
 if (command != NULL)
-parse(g_head, commmand, num, string);
+parse(g_head, command, num, string);
 }
 if (line != NULL)
 free(line);

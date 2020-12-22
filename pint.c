@@ -1,12 +1,11 @@
 #include "monty.h"
-#include <studio.h>
 /**
- * 
- * 
- * 
- * 
+ * pint - printer
+ * @g_head: pointer to the first node
+ * @num: line counter
+ * Return: void
  */
-void pint(stack **g_head,int num)
+void pint(stack **g_head, int num)
 {
 if (*g_head == NULL )
 {

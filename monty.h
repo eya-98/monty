@@ -3,13 +3,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-void nop(__attribute__((unused))stack_t **g_head,__attribute__((unused)) int num);
-int parse(stack_t g_head, char *commmand, int num, char *string);
-void pint(stack **g_head,int num);
-void pop(stack_t **g_head, int num);
-stack_t push(stack_t **g_head, int num);
-stack_t swap(stack_t **g_head, int num);
-void _read(char **argv, stack_t g_head);
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -38,5 +34,12 @@ typedef struct instruction_s
   char *opcode;
   void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
-
+void nop(__attribute__((unused))stack_t **g_head,__attribute__((unused)) int num);
+void parse(stack_t g_head, char *commmand, int num, char *string);
+void pint(stack_t **g_head,int num);
+void pop(stack_t **g_head, int num);
+stack_t *push(stack_t **g_head, int num);
+stack_t swap(stack_t **g_head, int num);
+void _read(char **argv, stack_t g_head);
+void pall(stack_t **g_head, int num);
 #endif
