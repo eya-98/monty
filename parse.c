@@ -1,5 +1,4 @@
 #include "monty.h"
-int arg;
 /**
  * parse - line spliter
  *@command: command to execute
@@ -7,16 +6,20 @@ int arg;
  *@num: line counter
  */
 void _parse(stack_t **g_head, char *command, int num)
+{
 instruction_t cmd[] = {
-{"push", push},
-{"pall", pall}
+{"pall", pall},
+{"pint", pint},
+{"pop", pop},
+{"swap", swap},
+{NULL, NULL}
 };
 int i;
 for (i = 0; cmd[i].opcode; i++)
 {
 if (strcmp(command, cmd[i].opcode) == 0)
 {
-cmd[i].f(g_head, num);
+(cmd[i].f)(g_head, num);
 return;
 }
 }

@@ -6,6 +6,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
+#define DELIMS "\n \r\t"
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -34,12 +35,14 @@ typedef struct instruction_s
   char *opcode;
   void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+int main(int argc, char **argv);
 void nop(__attribute__((unused))stack_t **g_head,__attribute__((unused)) int num);
 void _parse(stack_t **g_head, char *commmand, int num);
 void pint(stack_t **g_head,int num);
 void pop(stack_t **g_head, int num);
-stack_t *push(stack_t **g_head, int num);
+void push(stack_t **g_head, int to_push);
 stack_t swap(stack_t **g_head, int num);
-void _read(char **argv, stack_t **g_head);
+void _read(char *n, stack_t **g_head);
 void pall(stack_t **g_head, int num);
+int _isdigit(char *c);
 #endif

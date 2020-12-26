@@ -5,30 +5,41 @@
  *@g_head: pointer to first node
  *Return: void
  */
-void _read(char **argv, stack_t **g_head)
+void _read(char *n, stack_t **g_head)
 {
-char *line = NULL, *command, *string;
-int num;
+char *line = NULL, *command, *token;
+int num, to_push;
 FILE *op;
 size_t len;
-string = malloc(sizeof(char *));
-if (string == NULL)
-{
-fprintf(stderr, "Error: malloc failed");
-exit(EXIT_FAILURE);
-}
-op = fopen(argv[1], "r");
+op = fopen(n, "r");
 if (op == NULL)
 {
-printf("Error: Can't open file %s\n", argv[1]);
+fprintf(stderr, "Error: Can't open file %s\n", n);
 exit(EXIT_FAILURE);
 }
 while (getline(&line, &len, op) != -1)
 {
-command = strtok(line, " ");
+command = strtok(line, DELIMS);
 num++;
 if (command != NULL)
+{
+if (strcmp(command, "push") == 0)
+{
+token = strtok(NULL, DELIMS);
+if (_isdigit(token) == 0)
+fprintf(stderr, "erreur à fixer");
+else 
+{
+to_push = atoi(token);
+if (!to_push || to_push < 0)
+printf("L%d: usage: push integer\n", num);
+else
+push(g_head, to_push);
+}
+}
+else
 _parse(g_head, command, num);
+}
 }
 if (line != NULL)
 free(line);

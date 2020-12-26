@@ -6,14 +6,15 @@
  */
 void pall(stack_t **g_head, int num)
 {
+stack_t *new = *g_head;
 if (*g_head == NULL)
 {
-fprintf("L %u: usage: push intege", num);
+fprintf(stderr, "L %u: usage: push intege", num);
 exit(EXIT_FAILURE);
 }
-while (*g_head)
+while (new)
 {
 printf("%d", (*g_head)->n);
-*g_head = (*g_head)->next;
+new = new->next;
 }
 }
