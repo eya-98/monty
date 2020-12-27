@@ -4,7 +4,7 @@
  *@g_head: pointer to the first node
  *@num: line counter
  */
-void push(stack_t **g_head, int to_push)
+void _push(stack_t **g_head, unsigned int to_push)
 {
 stack_t *new_node;
 new_node = malloc(sizeof(stack_t));

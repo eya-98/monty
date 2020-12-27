@@ -5,7 +5,7 @@
  * @num: line counter
  * Return: adress of new node
  */
-stack_t swap(stack_t **g_head, int num)
+void _swap(stack_t **g_head, unsigned int num)
 {
 stack_t *tmp;
 if (*g_head == NULL || (*g_head)->next == NULL)
@@ -19,5 +19,4 @@ tmp->prev = NULL;
 (*g_head)->next = tmp->next;
 tmp->next = *g_head;
 *g_head = tmp;
-return (**g_head);
 }

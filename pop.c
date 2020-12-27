@@ -6,7 +6,7 @@
  * @num: line counter
  * Return: void
  */
-void pop(stack_t **g_head, int num)
+void _pop(stack_t **g_head, unsigned int num)
 {
 stack_t *tmp;
 if (*g_head == NULL)

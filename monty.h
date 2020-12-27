@@ -36,13 +36,14 @@ typedef struct instruction_s
   void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 int main(int argc, char **argv);
-void nop(__attribute__((unused))stack_t **g_head,__attribute__((unused)) int num);
-void _parse(stack_t **g_head, char *commmand, int num);
-void pint(stack_t **g_head,int num);
-void pop(stack_t **g_head, int num);
-void push(stack_t **g_head, int to_push);
-stack_t swap(stack_t **g_head, int num);
+void _nop(__attribute__((unused))stack_t **g_head,__attribute__((unused)) unsigned int num);
+void (*_parse(stack_t **g_head, char *commmand, unsigned int num))(stack_t **g_head, unsigned int num);
+void _pint(stack_t **g_head, unsigned int num);
+void _pop(stack_t **g_head, unsigned int num);
+void _push(stack_t **g_head, unsigned int to_push);
+void _swap(stack_t **g_head, unsigned int num);
 void _read(char *n, stack_t **g_head);
-void pall(stack_t **g_head, int num);
+void _pall(stack_t **g_head, unsigned int num);
 int _isdigit(char *c);
+void add(__attribute__((unused))stack_t **g_head, __attribute__((unused))unsigned int num);
 #endif

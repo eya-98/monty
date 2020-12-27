@@ -4,7 +4,7 @@
  * @g_head : pointer to the stack
  * @num : line number
  */
-void pall(stack_t **g_head, int num)
+void _pall(stack_t **g_head, unsigned int num)
 {
 stack_t *new = *g_head;
 if (*g_head == NULL)
