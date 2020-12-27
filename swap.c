@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * swap - swap the top and the second elements of a dlinked lists
+ * _swap - swap the top and the second elements of a dlinked lists
  * @g_head: pointer to the first node
  * @num: line counter
  * Return: adress of new node
@@ -10,7 +10,7 @@ void _swap(stack_t **g_head, unsigned int num)
 stack_t *tmp;
 if (*g_head == NULL || (*g_head)->next == NULL)
 {
-fprintf(stderr, "L%i: can't swap, stack too short", num);
+fprintf(stderr, "L%u: can't swap, stack too short", num);
 exit(EXIT_FAILURE);
 }
 tmp = (*g_head)->next;

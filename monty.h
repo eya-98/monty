@@ -6,7 +6,6 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
-#define DELIMS "\n \r\t"
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -18,9 +17,9 @@
  */
 typedef struct stack_s
 {
-  int n;
-  struct stack_s *prev;
-  struct stack_s *next;
+int n;
+struct stack_s *prev;
+struct stack_s *next;
 } stack_t;
 /**
  * struct instruction_s - opcode and its function
@@ -32,12 +31,15 @@ typedef struct stack_s
  */
 typedef struct instruction_s
 {
-  char *opcode;
-  void (*f)(stack_t **stack, unsigned int line_number);
+char *opcode;
+void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+stack_t **g_head;
 int main(int argc, char **argv);
-void _nop(__attribute__((unused))stack_t **g_head,__attribute__((unused)) unsigned int num);
-void (*_parse(stack_t **g_head, char *commmand, unsigned int num))(stack_t **g_head, unsigned int num);
+void _nop(__attribute__((unused))stack_t **g_head,
+__attribute__((unused)) unsigned int num);
+void (*_parse(stack_t **g_head, char *commmand, unsigned int num))
+(stack_t **g_head, unsigned int num);
 void _pint(stack_t **g_head, unsigned int num);
 void _pop(stack_t **g_head, unsigned int num);
 void _push(stack_t **g_head, unsigned int to_push);
@@ -45,5 +47,6 @@ void _swap(stack_t **g_head, unsigned int num);
 void _read(char *n, stack_t **g_head);
 void _pall(stack_t **g_head, unsigned int num);
 int _isdigit(char *c);
-void add(__attribute__((unused))stack_t **g_head, __attribute__((unused))unsigned int num);
+void add(__attribute__((unused))stack_t **g_head,
+__attribute__((unused))unsigned int num);
 #endif

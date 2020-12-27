@@ -1,19 +1,27 @@
 #include "monty.h"
 /**
- *push - Add to the top of a list
+ *_push - Add to the top of a list
  *@g_head: pointer to the first node
  *@num: line counter
  */
-void _push(stack_t **g_head, unsigned int to_push)
+void _push(stack_t **g_head, unsigned int num)
 {
 stack_t *new_node;
+char *arg;
+
 new_node = malloc(sizeof(stack_t));
 if (new_node == NULL)
 {
 fprintf(stderr, "Error: malloc failed");
 exit(EXIT_FAILURE);
 }
-new_node->n = to_push;
+arg = strtok(NULL, "\n\t\r");
+if (arg == NULL || _isdigit(arg))
+{
+fprintf(stderr, "L%u: usage: push integer\n", num);
+exit(EXIT_FAILURE);
+}
+new_node->n = atoi(arg);
 new_node->prev = NULL;
 new_node->next = *g_head;
 if (*g_head != NULL)

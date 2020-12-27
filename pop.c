@@ -1,7 +1,7 @@
 #include "monty.h"
 #include <stdio.h>
 /**
- * pop - delete top
+ * _pop - delete top
  * @g_head: pointer ro the first node
  * @num: line counter
  * Return: void
@@ -11,8 +11,8 @@ void _pop(stack_t **g_head, unsigned int num)
 stack_t *tmp;
 if (*g_head == NULL)
 {
-fprintf(stderr, "L%i: can't pop an empty stack\n",num);
-exit (EXIT_FAILURE);
+fprintf(stderr, "L%i: can't pop an empty stack\n", num);
+exit(EXIT_FAILURE);
 }
 tmp = *g_head;
 *g_head = (*g_head)->next;

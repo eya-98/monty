@@ -1,7 +1,7 @@
 #include "monty.h"
 /**
  *_read - read function
- *@argv: args value
+ *@n: args value
  *@g_head: pointer to first node
  *Return: void
  */
