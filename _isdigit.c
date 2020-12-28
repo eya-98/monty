@@ -9,15 +9,15 @@
  */
 int _isdigit(char *c)
 {
-unsigned int i;
-for (i = 0; i < strlen(c); i++)
-{
+unsigned int i = 0;
 if (c[0] == '-')
 i++;
-if (c[i] >= '0' && c[i] <= '9')
+while (c[i])
 {
+if (c[i] >= '0' && c[i] <= '9')
+i++;
+else 
 return (1);
-}
 }
 return (0);
 }
