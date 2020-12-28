@@ -15,6 +15,7 @@ instruction_t cmd[] = {
 {"pint", _pint},
 {"pop", _pop},
 {"swap", _swap},
+{"nop", _nop},
 {NULL, NULL}
 };
 int i;
@@ -23,7 +24,7 @@ for (i = 0; cmd[i].opcode != NULL; i++)
 if (strcmp(command, cmd[i].opcode) == 0)
 {
 cmd[i].f(g_head, num);
-break;
+return;
 }
 }
 fprintf(stderr, "L%u, unkonwn instruction %s\n", num, command);
