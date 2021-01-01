@@ -38,8 +38,7 @@ stack_t **g_head;
 int main(int argc, char **argv);
 void _nop(__attribute__((unused))stack_t **g_head,
 __attribute__((unused)) unsigned int num);
-void (*_parse(stack_t **g_head, char *commmand, unsigned int num))
-(stack_t **g_head, unsigned int num);
+void _parse(stack_t **g_head, char *commmand, unsigned int num);
 void _pint(stack_t **g_head, unsigned int num);
 void _pop(stack_t **g_head, unsigned int num);
 void _push(stack_t **g_head, unsigned int to_push);

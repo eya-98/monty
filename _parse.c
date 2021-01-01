@@ -6,8 +6,7 @@
  *@num: line counter
  * Return: void
  */
-void (*_parse(stack_t **g_head, char *command, unsigned int num))
-(stack_t **g_head, unsigned int num)
+void _parse(stack_t **g_head, char *command, unsigned int num)
 {
 int i;
 instruction_t cmd[] = {
@@ -24,7 +23,7 @@ for (i = 0; cmd[i].opcode; i++)
 if (strcmp(command, cmd[i].opcode) > 0)
 {
 cmd[i].f(g_head, num);
-return (0);
+return;
 }
 }
 fprintf(stderr, "L%u, unkonwn instruction %s\n", num, command);
