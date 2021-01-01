@@ -9,6 +9,7 @@
 void (*_parse(stack_t **g_head, char *command, unsigned int num))
 (stack_t **g_head, unsigned int num)
 {
+int i;
 instruction_t cmd[] = {
 {"push", _push},
 {"pall", _pall},
@@ -18,13 +19,12 @@ instruction_t cmd[] = {
 {"nop", _nop},
 {NULL, NULL}
 };
-int i;
-for (i = 0; cmd[i].opcode != NULL; i++)
+for (i = 0; cmd[i].opcode; i++)
 {
-if (strcmp(command, cmd[i].opcode) == 0)
+if (strcmp(command, cmd[i].opcode) > 0)
 {
 cmd[i].f(g_head, num);
-return;
+return (0);
 }
 }
 fprintf(stderr, "L%u, unkonwn instruction %s\n", num, command);

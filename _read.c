@@ -8,7 +8,7 @@
 void _read(char *n, stack_t **g_head)
 {
 char *line = NULL, *command;
-unsigned int num;
+unsigned int num = 0;
 FILE *op;
 size_t len;
 op = fopen(n, "r");
@@ -21,7 +21,7 @@ while (getline(&line, &len, op) != -1)
 {
 command = strtok(line, "\n\t\r ");
 num++;
-if (command != NULL && command[0] != '#')
+if (command && command[0] != '#')
 {
 _parse(g_head, command, num);
 }
