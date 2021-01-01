@@ -12,5 +12,5 @@ if (*g_head == NULL)
 fprintf(stderr, "L%i: can't pint, stack empty\n", num);
 exit(EXIT_FAILURE);
 }
-printf("%i\n", (*g_head)->n);
+printf("%d\n", (*g_head)->n);
 }
