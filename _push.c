@@ -15,7 +15,7 @@ fprintf(stderr, "Error: malloc failed %u", num);
 exit(EXIT_FAILURE);
 }
 arg = strtok(NULL, "\n\t\r ");
-if (arg == '\0' || _isdigit(arg) == 1)
+if (arg == NULL || _isdigit(arg) == 1)
 {
 fprintf(stderr, "L%u: usage: push integer\n", num);
 exit(EXIT_FAILURE);

@@ -9,7 +9,7 @@ void _pall(stack_t **g_head, __attribute__((unused)) unsigned int num )
 stack_t *new = *g_head;
 while (new)
 {
-printf("%d", (*g_head)->n);
+printf("%d", new->n);
 new = new->next;
 }
 }
