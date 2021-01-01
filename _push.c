@@ -11,11 +11,11 @@ char *arg;
 new_node = malloc(sizeof(stack_t));
 if (new_node == NULL)
 {
-fprintf(stderr, "Error: malloc failed");
+fprintf(stderr, "Error: malloc failed %u", num);
 exit(EXIT_FAILURE);
 }
 arg = strtok(NULL, "\n\t\r ");
-if (_isdigit(arg) == 1)
+if (arg == '\0' || _isdigit(arg) == 1)
 {
 fprintf(stderr, "L%u: usage: push integer\n", num);
 exit(EXIT_FAILURE);
