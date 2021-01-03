@@ -34,10 +34,8 @@ typedef struct instruction_s
 char *opcode;
 void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
-stack_t **g_head;
 int main(int argc, char **argv);
-void _nop(__attribute__((unused))stack_t **g_head,
-__attribute__((unused)) unsigned int num);
+void _nop(stack_t **g_head, unsigned int num);
 void _parse(stack_t **g_head, char *commmand, unsigned int num);
 void _pint(stack_t **g_head, unsigned int num);
 void _pop(stack_t **g_head, unsigned int num);
