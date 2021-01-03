@@ -34,6 +34,7 @@ typedef struct instruction_s
 char *opcode;
 void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+stack_t **g_head;
 int main(int argc, char **argv);
 void _nop(stack_t **g_head, unsigned int num);
 void _parse(stack_t **g_head, char *commmand, unsigned int num);
@@ -42,7 +43,7 @@ void _pop(stack_t **g_head, unsigned int num);
 void _push(stack_t **g_head, unsigned int to_push);
 void _swap(stack_t **g_head, unsigned int num);
 void _read(char *n, stack_t **g_head);
-void _pall(stack_t **g_head, unsigned int num);
+void _pall(stack_t **g_head, __attribute__((unused)) unsigned int num);
 int _isdigit(char *c);
 void add(stack_t **g_head, unsigned int num);
 #endif
