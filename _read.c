@@ -19,9 +19,9 @@ exit(EXIT_FAILURE);
 }
 while (getline(&line, &len, op) != -1)
 {
-command = strtok(line, "\n\t\r ");
 num++;
-if (command && command[0] != '#')
+command = strtok(line, "\n\t\r ");
+if (command != NULL && command[0] != '#')
 {
 _parse(g_head, command, num);
 }

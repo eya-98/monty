@@ -6,10 +6,11 @@
  */
 void _pall(stack_t **g_head, __attribute__((unused)) unsigned int num )
 {
-stack_t *new = *g_head;
-while (new)
+stack_t *new;
+new = *g_head;
+while (new != NULL)
 {
-printf("%d", new->n);
+printf("%d\n", new->n);
 new = new->next;
 }
 }
