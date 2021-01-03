@@ -46,6 +46,5 @@ void _swap(stack_t **g_head, unsigned int num);
 void _read(char *n, stack_t **g_head);
 void _pall(stack_t **g_head, unsigned int num);
 int _isdigit(char *c);
-void add(__attribute__((unused))stack_t **g_head,
-__attribute__((unused))unsigned int num);
+void add(stack_t **g_head, unsigned int num);
 #endif

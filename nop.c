@@ -5,7 +5,8 @@
  * @num: unused variable
  *Return: void
  */
-void _nop(__attribute__((unused))stack_t **g_head,
-__attribute__((unused)) unsigned int num)
+void _nop(stack_t **g_head, unsigned int num)
 {
+(void)g_head;
+(void)num;
 }

@@ -20,7 +20,7 @@ instruction_t cmd[] = {
 };
 for (i = 0; cmd[i].opcode; i++)
 {
-if (strcmp(command, cmd[i].opcode) > 0)
+if (strcmp(command, cmd[i].opcode) == 0)
 {
 cmd[i].f(g_head, num);
 return;
