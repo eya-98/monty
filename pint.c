@@ -7,10 +7,11 @@
  */
 void _pint(stack_t **g_head, unsigned int num)
 {
+stack_t *head = *g_head;
 if (*g_head == NULL)
 {
-fprintf(stderr, "L%i: can't pint, stack empty\n", num);
+fprintf(stderr, "L%u: can't pint, stack empty\n", num);
 exit(EXIT_FAILURE);
 }
-printf("%d\n", (*g_head)->n);
+printf("%d\n", head->n);
 }
