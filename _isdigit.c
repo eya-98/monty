@@ -16,7 +16,7 @@ while (c[i])
 {
 if (c[i] >= '0' && c[i] <= '9')
 i++;
-else 
+else
 return (1);
 }
 return (0);
