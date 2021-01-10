@@ -26,10 +26,7 @@ if (command != NULL && command[0] != '#')
 _parse(g_head, command, num);
 }
 }
-if (line != NULL)
-{
 free(line);
 fclose(op);
-}
 exit(EXIT_SUCCESS);
 }
