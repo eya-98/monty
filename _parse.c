@@ -16,6 +16,7 @@ instruction_t cmd[] = {
 {"pop", _pop},
 {"swap", _swap},
 {"nop", _nop},
+{"add", add},
 {NULL, NULL}
 };
 for (i = 0; cmd[i].opcode; i++)
