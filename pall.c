@@ -18,6 +18,6 @@ free(new);
 return;
 }
 }
-if new != NULL
+if (new != NULL)
 free(new);
 }
