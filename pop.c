@@ -12,6 +12,7 @@ stack_t *tmp;
 if (!(*g_head) || !g_head)
 {
 fprintf(stderr, "L%i: can't pop an empty stack\n", num);
+_free(g_head);
 exit(EXIT_FAILURE);
 }
 tmp = *g_head;

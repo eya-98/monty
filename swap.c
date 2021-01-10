@@ -11,6 +11,7 @@ stack_t *tmp;
 if (*g_head == NULL || (*g_head)->next == NULL)
 {
 fprintf(stderr, "L%u: can't swap, stack too short", num);
+_free(g_head);
 exit(EXIT_FAILURE);
 }
 tmp = (*g_head)->next;
