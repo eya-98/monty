@@ -27,6 +27,7 @@ _parse(g_head, command, num);
 }
 }
 free(line);
+_free(g_head);
 fclose(op);
 exit(EXIT_SUCCESS);
 }
