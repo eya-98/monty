@@ -26,6 +26,6 @@ cmd[i].f(g_head, num);
 return;
 }
 }
-fprintf(stderr, "L%u, unkonwn instruction %s\n", num, command);
+fprintf(stderr, "L%u: unkonwn instruction %s\n", num, command);
 exit(EXIT_FAILURE);
 }
