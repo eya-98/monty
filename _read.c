@@ -9,7 +9,6 @@ void _read(char *n, stack_t **g_head)
 {
 char *line = NULL, *command;
 unsigned int num = 0;
-FILE *op;
 size_t len;
 op = fopen(n, "r");
 if (op == NULL)

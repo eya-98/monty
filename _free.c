@@ -13,4 +13,5 @@ _free(&(*g_head)->next);
 free(*g_head);
 *g_head = NULL;
 }
+fclose(op);
 }
