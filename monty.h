@@ -36,6 +36,7 @@ void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 stack_t **g_head;
 int main(int argc, char **argv);
+void _free(stack_t **g_head);
 void _nop(stack_t **g_head, unsigned int num);
 void _parse(stack_t **g_head, char *commmand, unsigned int num);
 void _pint(stack_t **g_head, unsigned int num);

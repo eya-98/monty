@@ -29,7 +29,7 @@ return;
 fprintf(stderr, "L%u: unknown instruction %s\n", num, command);
 if (*g_head != NULL)
 {
-free(*g_head);
+_free(g_head);
 }
 exit(EXIT_FAILURE);
 }
