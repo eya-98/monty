@@ -7,7 +7,7 @@
  */
 void _pint(stack_t **g_head, unsigned int num)
 {
-if (*g_head == NULL)
+if (*g_head == NULL || g_head == NULL)
 {
 fprintf(stderr, "L%u: can't pint, stack empty\n", num);
 _free(g_head);
