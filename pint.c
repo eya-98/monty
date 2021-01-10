@@ -13,5 +13,4 @@ printf("%d\n", (*g_head)->n);
 }
 fprintf(stderr, "L%u: can't pint, stack empty\n", num);
 exit(EXIT_FAILURE);
-_free(g_head);
 }
