@@ -16,5 +16,7 @@ exit(EXIT_FAILURE);
 head = NULL;
 g_head = &head;
 _read(argv[1], g_head);
+free(g_head);
+free(head);
 exit(EXIT_SUCCESS);
 }

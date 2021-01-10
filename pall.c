@@ -15,7 +15,10 @@ printf("%d\n", new->n);
 new = new->next;
 if (new == *g_head)
 {
+free(new);
 return;
 }
 }
+if new != NULL
+free(new);
 }

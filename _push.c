@@ -26,4 +26,5 @@ new_node->next = *g_head;
 if (*g_head != NULL)
 (*g_head)->prev = new_node;
 *g_head = new_node;
+free(new_node);
 }
