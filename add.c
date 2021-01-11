@@ -5,7 +5,15 @@
  * @num: line counter
  * Return: void
  */
-void add(__attribute__((unused))stack_t **g_head,
-__attribute__((unused))unsigned int num)
+void add(stack_t **g_head, unsigned int num)
 {
+stack_t **h = g_head;
+if (!g_head || !(*g_head) || !(*g_head)->next)
+{
+fprintf(stderr, "L%u: can't add, stack too short\n", num);
+exit(EXIT_FAILURE);
+}
+*g_head = (*g_head)->next;
+(*g_head)->n += (*g_head)->prev->n;
+_pop(h, num);
 }
