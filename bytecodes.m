@@ -1,8 +1,3 @@
-push 6
-push 3
-pall
-pint
-swap
-pop
-add
-nop
+push 98
+push 402
+sawp
