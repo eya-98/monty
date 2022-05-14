@@ -9,5 +9,5 @@ gcc -Wall -Werror -Wextra -pedantic *.c -o monty
 ./monty file.m
 
 # 📘 Authors
-Eya Nani - [Eya Nani](https://www.linkedin.com/in/eyanani/)
-Hadir Jenni - [Hadir Jenni](https://www.linkedin.com/in/hadir-jenni/)
+- Eya Nani - [Eya Nani](https://www.linkedin.com/in/eyanani/)
+- Hadir Jenni - [Hadir Jenni](https://www.linkedin.com/in/hadir-jenni/)
